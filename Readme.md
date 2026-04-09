@@ -93,3 +93,7 @@ PUT Update Job by Id: http://localhost:8080/companies/{companyId}/reviews/{revie
     "rating": ""
 }
 ````
+
+Build a docker image using spring-boot-maven plugin
+
+mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=<imagename>"
