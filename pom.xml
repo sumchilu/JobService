@@ -56,10 +56,10 @@
             <scope>runtime</scope>
         </dependency>
         <!--        This dependency to access H2 DB via Browser-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-h2console</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-h2console</artifactId>-->
+<!--        </dependency>-->
         <!--        This dependency to access H2 DB via Browser-->
 
         <dependency>

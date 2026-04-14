@@ -5,6 +5,7 @@ services:
     environment:
       POSTGRES_USER: Test
       POSTGRES_PASSWORD: Test
+      POSTGRES_DB: jobapp
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
@@ -13,23 +14,23 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4:latest
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin:/var/lib/pgadmin
-    ports:
-      - "5080:80"
-    networks:
-      - postgres
-    restart: unless-stopped
+#  pgadmin:
+#    container_name: pgadmin_container
+#    image: dpage/pgadmin4:latest
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+#      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+#      PGADMIN_CONFIG_SERVER_MODE: 'False'
+#    volumes:
+#      - pgadmin:/var/lib/pgadmin
+#    ports:
+#      - "5080:80"
+#    networks:
+#      - postgres
+#    restart: unless-stopped
 networks:
   postgres:
     driver: bridge
 volumes:
   postgres:
-  pgadmin:
+#  pgadmin:
